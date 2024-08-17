@@ -9,6 +9,7 @@
 <body>
     <img id="tracker" src="" style="display: none;">
     <img id="trackerx" src="" style="display: none;">
+    <p id="setLink"></p>
     <script type="text/javascript">
         var url = new URL(window.location.href);
         var cid = url.searchParams.get("cid");
@@ -21,12 +22,14 @@
             "https://blog.wapka.website/adstook",
             "https://blog.wapka.xyz/adstook",
         ];
-        const randomLink = Math.floor(Math.random() * adLinks.length);
+        const randomLink = adLinks[Math.floor(Math.random() * adLinks.length)];
         if (window.top == window.self) { //if not iframe then show ads
+            document.getElementById('setLink').innerText = randomLink;
             window.location.replace(randomLink);
         }
         console.log(randomLink);
     </script>
+
 </body>
 
 </html>
