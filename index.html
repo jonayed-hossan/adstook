@@ -1,5 +1,32 @@
-<html>
+<!DOCTYPE html>
+
+<head>
+    <title>Loading...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer">
+</head>
+
 <body>
-<h1>HII</h1>
+    <img id="tracker" src="" style="display: none;">
+    <img id="trackerx" src="" style="display: none;">
+    <script type="text/javascript">
+        var url = new URL(window.location.href);
+        var cid = url.searchParams.get("cid");
+        if (cid) {
+            document.getElementById('tracker').setAttribute('src', "https://ct.popcash.net/click?aid=186280&clickid=" + cid);
+        }
+        const adLinks = [
+            "https://blog.wapka.co/adstook",
+            "https://blog.wapka.site/adstook",
+            "https://blog.wapka.website/adstook",
+            "https://blog.wapka.xyz/adstook",
+        ];
+        const randomLink = Math.floor(Math.random() * adLinks.length);
+        if (window.top == window.self) { //if not iframe then show ads
+            window.location.replace(randomLink);
+        }
+        console.log(randomLink);
+    </script>
 </body>
+
 </html>
