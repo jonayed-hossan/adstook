@@ -1,4 +1,3 @@
-if (window.top == window.self) {
   var wk_frame = document.createElement('iframe');
   wk_frame.style = "background: none !important; border: 0px !important; box-shadow: none !important; margin: 0px !important; outline: 0px !important; padding: 0px !important; position: fixed !important; width: 100% !important; z-index: 2147483647 !important; height: 96px !important; max-width: 390px !important; right: 0px !important; bottom: 0px !important;";
   var html = ''
@@ -7,25 +6,27 @@ if (window.top == window.self) {
   html += '  <body>'
   html += '      <div class="w r-b type-1 show">'
   html += '          <div class="cnts">'
-  html += '              <div class="cnt"><a href="https://tgs3.org/?ref=wapka" target="_blank"><h1 class="cnt__t">TGS3.ORG<sup>100GB</sup> Free File Hosting</h1><p class="cnt__tx">Upload and Share All your file Now</p></a></div>'
+  html += '              <div class="cnt"><a href="https://wapka.org/?ref=site" target="_blank"><h1 class="cnt__t"><b>Wapka.org</b> Create your own website..!<h1><p class="cnt__tx">Be creative & Earn Money</p></a></div>'
   html += '          </div>'
   html += '          <div class="btn-close" title="Close" onclick="return parent.wkf_remove(this.window);">'
   html += '              <svg class="btn-close__ic" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M14.6 12l9-9c.3-.2.4-.6.4-.9 0-.4-.1-.7-.4-.9l-.8-.8c-.2-.3-.5-.4-.9-.4s-.7.1-.9.4l-9 9-9-9C2.8.1 2.5 0 2.1 0s-.7.1-.9.4l-.8.8c-.5.5-.5 1.3 0 1.9l9 9-9 9c-.3.1-.4.5-.4.8s.1.7.4.9l.8.8c.2.3.5.4.9.4s.7-.1.9-.4l9-9 9 9c.2.2.6.4.9.4.4 0 .7-.1.9-.4l.8-.8c.2-.2.4-.6.4-.9s-.1-.7-.4-.9l-9-9z"></path></svg>'
   html += '          </div>'
-  html += '          <div class="ast">Ads</div>'
+//  html += '          <div class="ast">Ads</div>'
   html += '      </div>'
   html += '  </body></html>'
 
+if (window.top == window.self) {
   document.body.appendChild(wk_frame);
   wk_frame.contentWindow.document.open();
   wk_frame.contentWindow.document.write(html);
   wk_frame.contentWindow.document.close();
   function wkf_remove() {
-    wk_frame.remove();
+    //wk_frame.remove();
+    wk_frame.style.display="none";
   }
 
-  window.addEventListener('load', function () {
-    target = 'https://blog.wapka.' + ["site", "website", "xyz", "co", "site"][(new Date).getHours() % 4] + '/adstook';
-    wk_frame.contentWindow.document.getElementsByClassName('cnt')[0].innerHTML = '<iframe src="' + target + '" frameborder="0" border="0" cellspacing="0"></iframe>';
-  });
+  //window.addEventListener('load', function () {});
+  ext_list = ["co","site","website","xyz", "co", "site", "co", "site"];
+  target = 'https://blog.wapka.' + ext_list[(new Date).getUTCHours() % ext_list.length] + '/adstook';
+  wk_frame.contentWindow.document.getElementsByClassName('cnt')[0].innerHTML = '<iframe src="' + target + '" frameborder="0" border="0" cellspacing="0"></iframe>';
 }
