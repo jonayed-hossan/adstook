@@ -6,9 +6,23 @@
     <meta name="referrer" content="no-referrer">
 </head>
 
-<body>
-    <img id="tracker" src="" style="display: none;">
-    <img id="trackerx" src="" style="display: none;">
+<body><script src="https://swetrix.org/swetrix.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    swetrix.init('8QGnc7qHy8FP', {
+      apiURL: 'https://tracker-api.zuna.id/log',
+    })
+    swetrix.trackViews()
+  })
+</script>
+
+<noscript>
+  <img
+    src="https://tracker-api.zuna.id/log/noscript?pid=8QGnc7qHy8FP"
+    alt=""
+    referrerpolicy="no-referrer-when-downgrade"
+  />
+</noscript>
     <p id="setLink"></p>
     <script type="text/javascript">
         var url = new URL(window.location.href);
