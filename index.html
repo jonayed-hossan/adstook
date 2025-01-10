@@ -7,10 +7,12 @@
 <body>
     <p id="setLink"></p>
     <script type="text/javascript">
+        ext_list = ["co", "site", "website", "xyz", "co", "site", "co", "site"];
+        var randomLink = 'https://blog.wapka.' + ext_list[(new Date).getUTCHours() % ext_list.length] + '/adstook';
         var url = new URL(window.location.href);
         var cid = url.searchParams.get("cid");
-        if (cid) {
-            document.getElementById('tracker').setAttribute('src', "https://ct.popcash.net/click?aid=186280&clickid=" + cid);
+        if (cid > 0) {
+            //document.getElementById('tracker').setAttribute('src', "https://ct.popcash.net/click?aid=186280&clickid=" + cid);
             const adLinks = [
             "https://blog.wapka.co/adstook",
             "https://blog.wapka.co/adstook",
@@ -19,10 +21,7 @@
             "https://blog.wapka.website/adstook",
             "https://blog.wapka.xyz/adstook",
             ];
-            const randomLink = adLinks[Math.floor(Math.random() * adLinks.length)];
-        }else{
-            ext_list = ["co", "site", "website", "xyz", "co", "site", "co", "site"];
-            const randomLink = 'https://blog.wapka.' + ext_list[(new Date).getUTCHours() % ext_list.length] + '/adstook';
+            var randomLink = adLinks[Math.floor(Math.random() * adLinks.length)];
         }
         if (window.top == window.self) { //if not iframe then show ads
             document.getElementById('setLink').innerText = randomLink;
