@@ -1,51 +1,34 @@
 <!DOCTYPE html>
-
 <head>
     <title>Loading...</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="no-referrer">
 </head>
-
-<body><script src="https://swetrix.org/swetrix.js" defer></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    swetrix.init('8QGnc7qHy8FP', {
-      apiURL: 'https://tracker-api.zuna.id/log',
-    })
-    swetrix.trackViews()
-  })
-</script>
-
-<noscript>
-  <img
-    src="https://tracker-api.zuna.id/log/noscript?pid=8QGnc7qHy8FP"
-    alt=""
-    referrerpolicy="no-referrer-when-downgrade"
-  />
-</noscript>
+<body>
     <p id="setLink"></p>
     <script type="text/javascript">
         var url = new URL(window.location.href);
         var cid = url.searchParams.get("cid");
         if (cid) {
             document.getElementById('tracker').setAttribute('src', "https://ct.popcash.net/click?aid=186280&clickid=" + cid);
-        }
-        const adLinks = [
+            const adLinks = [
             "https://blog.wapka.co/adstook",
             "https://blog.wapka.co/adstook",
             "https://blog.wapka.co/adstook",
             "https://blog.wapka.site/adstook",
             "https://blog.wapka.website/adstook",
             "https://blog.wapka.xyz/adstook",
-        ];
-        const randomLink = adLinks[Math.floor(Math.random() * adLinks.length)];
+            ];
+            const randomLink = adLinks[Math.floor(Math.random() * adLinks.length)];
+        }else{
+            ext_list = ["co", "site", "website", "xyz", "co", "site", "co", "site"];
+            const randomLink = 'https://blog.wapka.' + ext_list[(new Date).getUTCHours() % ext_list.length] + '/adstook';
+        }
         if (window.top == window.self) { //if not iframe then show ads
             document.getElementById('setLink').innerText = randomLink;
             window.location.replace(randomLink);
         }
         console.log(randomLink);
     </script>
-
 </body>
-
 </html>
