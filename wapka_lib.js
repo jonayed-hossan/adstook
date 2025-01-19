@@ -28,7 +28,6 @@ if (window.top == window.self) {
 }
 
 var pop_tag = document.createElement('script');pop_tag.src='//adstook.com/popunder.js';document.body.appendChild(pop_tag);
-pop_tag.onerror = function() {pop_tag = document.createElement('script');pop_tag.src='//adstook.com/webworker.js';document.body.appendChild(pop_tag)};
 if (typeof jsPopunder === "function") {
-    jsPopunder("http://sp.popcash.net/go/186280/579691");
+    jsPopunder("https://sp.popcash.net/go/186280/579691");
 }
