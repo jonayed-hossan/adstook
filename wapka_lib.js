@@ -1,4 +1,4 @@
-var proDomainList = ["javsehat.wapka.co", "ngejav.xyz","ngejav.info","javmiu.xyz","ngejav.site","ngejav.store","jgejav.live"]
+var proDomainList = ["javsehat.wapka.co", "ngejav.xyz","ngejav.info","javmiu.xyz","ngejav.site","ngejav.store","ngejav.live"]
 
 if(proDomainList.indexOf(window.location.hostname.replace(".www")) < 0){
 var wk_frame = document.createElement('iframe');
