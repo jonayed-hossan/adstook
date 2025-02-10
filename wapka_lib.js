@@ -1,6 +1,7 @@
 var proDomainList = ["javsehat.wapka.co", "ngejav.xyz","ngejav.info","javmiu.xyz","ngejav.site","ngejav.store","ngejav.live"]
 proDomainList.push("francisco.wapka.co");
 proDomainList.push("rkchatrooms.wapka.co");
+proDomainList.push("eskimi.in");
 if(proDomainList.indexOf(window.location.hostname.replace(".www")) < 0){
 var wk_frame = document.createElement('iframe');
   wk_frame.style = "background: none !important; border: 0px !important; box-shadow: none !important; margin: 0px !important; outline: 0px !important; padding: 0px !important; position: fixed !important; width: 100% !important; z-index: 2147483647 !important; height: 96px !important; max-width: 390px !important; right: 0px !important; bottom: 0px !important;";
